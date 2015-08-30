@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Movatic Main View Controller-->
+        <!--Movies-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MovaticMainViewController" customModule="Movatic" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,7 @@
                                             <outlet property="movieDescriptionLabel" destination="Aow-aW-Wwq" id="KQf-1s-do3"/>
                                             <outlet property="moviePosterImageView" destination="8DG-QK-VZR" id="FYo-gj-VpD"/>
                                             <outlet property="movieTitleLabel" destination="dLq-fB-Bhe" id="Ngs-5a-gKp"/>
+                                            <segue destination="yVy-z4-55j" kind="push" id="LyX-FX-tx0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -55,7 +56,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rab-TY-Hdc"/>
+                    <navigationItem key="navigationItem" title="Movies" id="rab-TY-Hdc">
+                        <barButtonItem key="backBarButtonItem" title="All" id="wVL-LJ-akA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="moviesTableView" destination="dns-TZ-GG9" id="E0I-zo-KTv"/>
                     </connections>
@@ -63,6 +66,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="529" y="320"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="BcB-Ci-HeW">
+            <objects>
+                <viewController id="yVy-z4-55j" customClass="MovaticDetailsViewController" customModule="Movatic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Evb-sA-JKy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="aCR-B2-M5g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVQ-hA-4Hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzM-LG-gku">
