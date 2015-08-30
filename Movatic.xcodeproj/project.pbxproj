@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479C71B938F4000F795B3 /* AppDelegate.swift */; };
-		0CC479CA1B938F4000F795B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479C91B938F4000F795B3 /* ViewController.swift */; };
 		0CC479CD1B938F4000F795B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CB1B938F4000F795B3 /* Main.storyboard */; };
 		0CC479CF1B938F4000F795B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CE1B938F4000F795B3 /* Images.xcassets */; };
 		0CC479D21B938F4000F795B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479D01B938F4000F795B3 /* LaunchScreen.xib */; };
 		0CC479DE1B938F4000F795B3 /* MovaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479DD1B938F4000F795B3 /* MovaticTests.swift */; };
+		0CE23C8A1B9394530040382F /* MovaticMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C891B9394530040382F /* MovaticMainViewController.swift */; };
+		0CE23C8C1B9394880040382F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C8B1B9394880040382F /* MovieCell.swift */; };
+		DC5E2F8B1CA8584CFB400071 /* libPods-Movatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D5CBBF38CA0854F20FB9A4 /* libPods-Movatic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,18 @@
 		0CC479C21B938F4000F795B3 /* Movatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479C61B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479C71B938F4000F795B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CC479C91B938F4000F795B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CC479CC1B938F4000F795B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CC479CE1B938F4000F795B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0CC479D11B938F4000F795B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0CC479D71B938F4000F795B3 /* MovaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479DC1B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479DD1B938F4000F795B3 /* MovaticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovaticTests.swift; sourceTree = "<group>"; };
+		0CE23C841B9390630040382F /* Movatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movatic-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CE23C891B9394530040382F /* MovaticMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovaticMainViewController.swift; sourceTree = "<group>"; };
+		0CE23C8B1B9394880040382F /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		2A76EA02E577ECF0FD959047 /* Pods-Movatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movatic/Pods-Movatic.debug.xcconfig"; sourceTree = "<group>"; };
+		2D047A45AC4EBFDEC388C223 /* Pods-Movatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movatic/Pods-Movatic.release.xcconfig"; sourceTree = "<group>"; };
+		A6D5CBBF38CA0854F20FB9A4 /* libPods-Movatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Movatic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5E2F8B1CA8584CFB400071 /* libPods-Movatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,9 @@
 				0CC479C41B938F4000F795B3 /* Movatic */,
 				0CC479DA1B938F4000F795B3 /* MovaticTests */,
 				0CC479C31B938F4000F795B3 /* Products */,
+				FBB6385FA7B70B9A4894EE6E /* Pods */,
+				ED8BF60BB861F824D312332D /* Frameworks */,
+				0CE23C841B9390630040382F /* Movatic-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +88,9 @@
 		0CC479C41B938F4000F795B3 /* Movatic */ = {
 			isa = PBXGroup;
 			children = (
+				0CE23C881B9393F00040382F /* Views */,
+				0CE23C871B9393EA0040382F /* View Controllers */,
 				0CC479C71B938F4000F795B3 /* AppDelegate.swift */,
-				0CC479C91B938F4000F795B3 /* ViewController.swift */,
 				0CC479CB1B938F4000F795B3 /* Main.storyboard */,
 				0CC479CE1B938F4000F795B3 /* Images.xcassets */,
 				0CC479D01B938F4000F795B3 /* LaunchScreen.xib */,
@@ -112,6 +124,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0CE23C871B9393EA0040382F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0CE23C891B9394530040382F /* MovaticMainViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0CE23C881B9393F00040382F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CE23C8B1B9394880040382F /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		ED8BF60BB861F824D312332D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6D5CBBF38CA0854F20FB9A4 /* libPods-Movatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB6385FA7B70B9A4894EE6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A76EA02E577ECF0FD959047 /* Pods-Movatic.debug.xcconfig */,
+				2D047A45AC4EBFDEC388C223 /* Pods-Movatic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CC479E11B938F4000F795B3 /* Build configuration list for PBXNativeTarget "Movatic" */;
 			buildPhases = (
+				1744FA15C85D89EE6B0EBAAE /* Check Pods Manifest.lock */,
 				0CC479BE1B938F4000F795B3 /* Sources */,
 				0CC479BF1B938F4000F795B3 /* Frameworks */,
 				0CC479C01B938F4000F795B3 /* Resources */,
+				6325DA8F730A87B48358B09C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +254,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1744FA15C85D89EE6B0EBAAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6325DA8F730A87B48358B09C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Movatic/Pods-Movatic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CC479BE1B938F4000F795B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC479CA1B938F4000F795B3 /* ViewController.swift in Sources */,
 				0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */,
+				0CE23C8A1B9394530040382F /* MovaticMainViewController.swift in Sources */,
+				0CE23C8C1B9394880040382F /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,21 +419,28 @@
 		};
 		0CC479E21B938F4000F795B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A76EA02E577ECF0FD959047 /* Pods-Movatic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Movatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Movatic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0CC479E31B938F4000F795B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D047A45AC4EBFDEC388C223 /* Pods-Movatic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Movatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Movatic-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +497,7 @@
 				0CC479E31B938F4000F795B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CC479E41B938F4000F795B3 /* Build configuration list for PBXNativeTarget "MovaticTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +506,7 @@
 				0CC479E61B938F4000F795B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
