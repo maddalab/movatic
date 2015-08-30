@@ -10,6 +10,10 @@ import UIKit
 
 class MovaticDetailsViewController: UIViewController {
 
+    @IBOutlet weak var moveBackdropImageView: UIImageView!
+    @IBOutlet weak var movieSynopsisLabel: UILabel!
+    var helper: MovieHelper? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

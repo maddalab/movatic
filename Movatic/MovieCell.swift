@@ -13,15 +13,18 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var moviePosterImageView: UIImageView!
     @IBOutlet weak var movieDescriptionLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var helper: MovieHelper? = nil
+    var serviceConfig: NSDictionary = [:]
+
+    func initialize(helper: MovieHelper) {
+        self.helper = helper
+        
+        self.movieTitleLabel.text = helper.title()
+        self.movieDescriptionLabel.text = helper.synopsis()
+        if let posterUrl = helper.posterNSURL() {
+            self.moviePosterImageView.setImageWithURL(posterUrl)
+        } else {
+            NSLog("Unable to load movie poster")
+        }
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

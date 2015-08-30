@@ -75,32 +75,19 @@ class MovaticMainViewController: UIViewController, UITableViewDataSource, UITabl
             let index = indexPath.row
             if movies.count > index {
                 let currentMovie = movies[index] as! NSDictionary
-                let title = currentMovie["title"] as? String
-                let overview = currentMovie["overview"] as? String
-                cell.movieTitleLabel.text = title
-                cell.movieDescriptionLabel.text = overview
-                let posterPath = currentMovie["poster_path"] as? String
-                if let posterPath = posterPath {
-                    if let posterUrl = moviePosterUrl(posterPath) {
-                        if let nsUrl = NSURL(string: posterUrl) {
-                            cell.moviePosterImageView.setImageWithURL(nsUrl)
-                        }
-                    }
-                }
+                cell.initialize(MovieHelper(movie: currentMovie, serviceConfig: serviceConfig))
             }
         }
         return cell
     }
 
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let cell = sender as! MovieCell
+        let controller = segue.destinationViewController as! MovaticDetailsViewController
+        controller.helper = cell.helper
     }
-    */
-
 }
