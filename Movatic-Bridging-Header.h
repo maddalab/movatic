@@ -4,3 +4,4 @@
 
 #import "AFNetworking.h"
 #import "JLTMDbClient.h"
+#import "JLTMDbClientDefines.h"

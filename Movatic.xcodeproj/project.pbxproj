@@ -28,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9A149F1B939956005E6E14 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		0C9A14A01B939956005E6E14 /* libJLTMDbClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJLTMDbClient.a; path = "Pods/../build/Debug-iphoneos/libJLTMDbClient.a"; sourceTree = "<group>"; };
+		0C9A14A31B939A5E005E6E14 /* libJLTMDbClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJLTMDbClient.a; path = "Pods/../build/Debug-iphoneos/libJLTMDbClient.a"; sourceTree = "<group>"; };
+		0C9A14A51B939ADB005E6E14 /* libJLTMDbClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJLTMDbClient.a; path = "Pods/../build/Debug-iphoneos/libJLTMDbClient.a"; sourceTree = "<group>"; };
 		0CC479C21B938F4000F795B3 /* Movatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479C61B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479C71B938F4000F795B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,10 @@
 		ED8BF60BB861F824D312332D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A14A51B939ADB005E6E14 /* libJLTMDbClient.a */,
+				0C9A14A31B939A5E005E6E14 /* libJLTMDbClient.a */,
+				0C9A149F1B939956005E6E14 /* libAFNetworking.a */,
+				0C9A14A01B939956005E6E14 /* libJLTMDbClient.a */,
 				A6D5CBBF38CA0854F20FB9A4 /* libPods-Movatic.a */,
 			);
 			name = Frameworks;
@@ -425,6 +433,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Movatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Movatic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -439,6 +451,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Movatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Movatic-Bridging-Header.h";
 			};
