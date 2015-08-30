@@ -13,10 +13,13 @@ class MovaticMainViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var moviesTableView: UITableView!
     var popularMovies: NSDictionary = [:]
     var currentPage: Int = 0
+    var serviceConfig: NSDictionary = [:]
+    let movieClient = JLTMDbClient.sharedAPIInstance()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let movieClient = JLTMDbClient.sharedAPIInstance()
         movieClient.APIKey = "c4ea245752c4d484f7fc05d79ab142e5"
+        loadConfiguration()
         movieClient.GET("movie/popular", withParameters: nil) { (response, error) -> Void in
             if let response: AnyObject = response {
                 self.currentPage = 0
@@ -31,6 +34,30 @@ class MovaticMainViewController: UIViewController, UITableViewDataSource, UITabl
         self.moviesTableView.dataSource = self
     }
     
+    func loadConfiguration() {
+        movieClient.GET("configuration", withParameters: nil) { (response, error) -> Void in
+            if let response: AnyObject = response {
+                self.serviceConfig = response as! NSDictionary
+            }
+        }
+    }
+    
+    func imagesBaseUrlString() -> String? {
+        let imagesConfig = serviceConfig["images"] as? NSDictionary
+        if let imagesConfig = imagesConfig {
+            let imgRoot = imagesConfig["base_url"] as? String
+            return imgRoot
+        }
+        return nil
+    }
+    
+    func moviePosterUrl(posterPath: String) -> String? {
+        if let base = imagesBaseUrlString() {
+            let posterUrl = base + "w92" + posterPath
+            return posterUrl
+        }
+        return nil
+    }
     
     // IMPLEMENTATION of UITableViewDataSources methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +79,14 @@ class MovaticMainViewController: UIViewController, UITableViewDataSource, UITabl
                 let overview = currentMovie["overview"] as? String
                 cell.movieTitleLabel.text = title
                 cell.movieDescriptionLabel.text = overview
+                let posterPath = currentMovie["poster_path"] as? String
+                if let posterPath = posterPath {
+                    if let posterUrl = moviePosterUrl(posterPath) {
+                        if let nsUrl = NSURL(string: posterUrl) {
+                            cell.moviePosterImageView.setImageWithURL(nsUrl)
+                        }
+                    }
+                }
             }
         }
         return cell
