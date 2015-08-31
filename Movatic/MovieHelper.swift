@@ -43,6 +43,24 @@ class MovieHelper {
         return nil
     }
     
+    func backdropUrl(backdropPath: String) -> String? {
+        if let base = imagesBaseUrlString() {
+            let backdropUrl = base + "w1280" + backdropPath
+            return backdropUrl
+        }
+        return nil
+    }
+    
+    func backdropNSURL() -> NSURL? {
+        let backdropPath = self.movie["backdrop_path"] as? String
+        if let backdropPath = backdropPath {
+            if let backdropUrl = self.backdropUrl(backdropPath) {
+                return NSURL(string: backdropUrl)
+            }
+        }
+        return nil
+    }
+    
     func title() -> String? {
         return movie["title"] as? String
     }

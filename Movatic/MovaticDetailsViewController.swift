@@ -10,13 +10,18 @@ import UIKit
 
 class MovaticDetailsViewController: UIViewController {
 
-    @IBOutlet weak var moveBackdropImageView: UIImageView!
     @IBOutlet weak var movieSynopsisLabel: UILabel!
+    @IBOutlet weak var movieBackdropImageView: UIImageView!
     var helper: MovieHelper? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let helper = helper {
+            if let bdUrl = helper.backdropNSURL() {
+                self.movieBackdropImageView.setImageWithURL(bdUrl)
+            }
+            self.movieSynopsisLabel.text = helper.synopsis()
+        }
         // Do any additional setup after loading the view.
     }
 
