@@ -4,6 +4,7 @@
 target 'Movatic' do
   pod 'AFNetworking'
   pod 'JLTMDbClient'
+  pod 'SVProgressHUD'
 end
 
 target 'MovaticTests' do

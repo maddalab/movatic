@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E598FC54629825A86B70F773"
+               BlueprintIdentifier = "97905826584CF3FFE2BB0CBD"
                BuildableName = "libPods-Movatic.a"
                BlueprintName = "Pods-Movatic"
                ReferencedContainer = "container:Pods.xcodeproj">

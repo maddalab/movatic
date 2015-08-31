@@ -5,3 +5,4 @@
 #import "UIImageView+AFNetworking.h"
 #import "JLTMDbClient.h"
 #import "JLTMDbClientDefines.h"
+#import "SVProgressHUD.h"

@@ -19,12 +19,19 @@ class MovaticMoviesViewController: UIViewController, UITableViewDataSource, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.setBackgroundColor(UIColor.blackColor().colorWithAlphaComponent(0.5))
+        SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+        SVProgressHUD.setViewForExtension(self.view)
+        SVProgressHUD.show()
+        
         movieClient.GET(fetchUrl, withParameters: nil) { (response, error) -> Void in
             if let response: AnyObject = response {
                 self.currentPage = 0
                 self.movies = response as! NSDictionary
+                SVProgressHUD.showSuccessWithStatus("")
             } else {
                 self.movies = [:]
+                SVProgressHUD.showErrorWithStatus("")
             }
             self.moviesTableView.reloadData()
         }

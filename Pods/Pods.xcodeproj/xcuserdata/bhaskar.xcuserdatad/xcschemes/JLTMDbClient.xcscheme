@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8A83C8070437E1CE56DE4A73"
+               BlueprintIdentifier = "5332E65406E1470DBD3A3837"
                BuildableName = "libJLTMDbClient.a"
                BlueprintName = "JLTMDbClient"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -17,6 +17,12 @@ class MovaticDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        SVProgressHUD.setBackgroundColor(UIColor.blackColor().colorWithAlphaComponent(0.5))
+        SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+        SVProgressHUD.setViewForExtension(self.view)
+        SVProgressHUD.show()
+
         if let helper = helper {
             if let bdUrl = helper.backdropNSURL() {
                 self.movieBackdropImageView.setImageWithURL(bdUrl)
@@ -24,23 +30,9 @@ class MovaticDetailsViewController: UIViewController {
             self.movieSynopsisText.text = helper.synopsis()
             self.movieTitleLabel.text = helper.title()
             super.title = helper.title()
+            SVProgressHUD.showSuccessWithStatus("")
+        } else {
+            SVProgressHUD.showErrorWithStatus("")
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
