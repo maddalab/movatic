@@ -10,6 +10,7 @@ import UIKit
 
 class MovaticDetailsViewController: UIViewController {
 
+    @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieSynopsisLabel: UILabel!
     @IBOutlet weak var movieBackdropImageView: UIImageView!
     var helper: MovieHelper? = nil
@@ -21,6 +22,7 @@ class MovaticDetailsViewController: UIViewController {
                 self.movieBackdropImageView.setImageWithURL(bdUrl)
             }
             self.movieSynopsisLabel.text = helper.synopsis()
+            self.movieTitleLabel.text = helper.title()
         }
         // Do any additional setup after loading the view.
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CA7456A1B93BABE00694876 /* MovaticDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA745691B93BABE00694876 /* MovaticDetailsViewController.swift */; };
 		0CA7456D1B93C1CC00694876 /* MovieHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7456C1B93C1CC00694876 /* MovieHelper.swift */; };
+		0CA7456F1B93D38900694876 /* DetailsSynopsisLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7456E1B93D38900694876 /* DetailsSynopsisLabel.swift */; };
 		0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479C71B938F4000F795B3 /* AppDelegate.swift */; };
 		0CC479CD1B938F4000F795B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CB1B938F4000F795B3 /* Main.storyboard */; };
 		0CC479CF1B938F4000F795B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CE1B938F4000F795B3 /* Images.xcassets */; };
@@ -36,6 +37,7 @@
 		0C9A14A51B939ADB005E6E14 /* libJLTMDbClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJLTMDbClient.a; path = "Pods/../build/Debug-iphoneos/libJLTMDbClient.a"; sourceTree = "<group>"; };
 		0CA745691B93BABE00694876 /* MovaticDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovaticDetailsViewController.swift; sourceTree = "<group>"; };
 		0CA7456C1B93C1CC00694876 /* MovieHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHelper.swift; sourceTree = "<group>"; };
+		0CA7456E1B93D38900694876 /* DetailsSynopsisLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsSynopsisLabel.swift; sourceTree = "<group>"; };
 		0CC479C21B938F4000F795B3 /* Movatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479C61B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479C71B938F4000F795B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE23C8B1B9394880040382F /* MovieCell.swift */,
+				0CA7456E1B93D38900694876 /* DetailsSynopsisLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0CA7456D1B93C1CC00694876 /* MovieHelper.swift in Sources */,
 				0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */,
 				0CA7456A1B93BABE00694876 /* MovaticDetailsViewController.swift in Sources */,
+				0CA7456F1B93D38900694876 /* DetailsSynopsisLabel.swift in Sources */,
 				0CE23C8A1B9394530040382F /* MovaticMainViewController.swift in Sources */,
 				0CE23C8C1B9394880040382F /* MovieCell.swift in Sources */,
 			);
