@@ -34,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 var upComingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/upcoming", title: "Coming Soon")
                 
+                tabBarController.tabBar.tintColor = UIColor.whiteColor()
+                tabBarController.tabBar.barTintColor = UIColor.blackColor()
+
                 tabBarController.viewControllers = [popularNavigationController, topRatedNavigationController, nowPlayingNavigationController, upComingNavigationController]
             }
         }
