@@ -95,23 +95,21 @@
                                 <color key="textColor" red="0.93142361111111116" green="0.75780177549424188" blue="0.25234932874657617" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zfZ-NR-nQa" customClass="DetailsSynopsisLabel" customModule="Movatic" customModuleProvider="target">
-                                <rect key="frame" x="13" y="328" width="295" height="230"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" textAlignment="justified" id="uRE-MO-Mhl">
+                                <rect key="frame" x="13" y="337" width="291" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33372790404040409" green="0.33372790404040409" blue="0.33372790404040409" alpha="1" colorSpace="calibratedRGB"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.8638895607" blue="0.290089084" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="aCR-B2-M5g"/>
                     <connections>
                         <outlet property="movieBackdropImageView" destination="NtP-cZ-Lym" id="d9c-5M-ACI"/>
-                        <outlet property="movieSynopsisLabel" destination="zfZ-NR-nQa" id="OZO-by-JMC"/>
+                        <outlet property="movieSynopsisText" destination="uRE-MO-Mhl" id="Xv2-2v-dYW"/>
                         <outlet property="movieTitleLabel" destination="nxc-qo-kqc" id="XWc-aW-9he"/>
                     </connections>
                 </viewController>

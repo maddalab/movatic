@@ -10,8 +10,8 @@ import UIKit
 
 class MovaticDetailsViewController: UIViewController {
 
+    @IBOutlet weak var movieSynopsisText: UITextView!
     @IBOutlet weak var movieTitleLabel: UILabel!
-    @IBOutlet weak var movieSynopsisLabel: UILabel!
     @IBOutlet weak var movieBackdropImageView: UIImageView!
     var helper: MovieHelper? = nil
 
@@ -21,10 +21,10 @@ class MovaticDetailsViewController: UIViewController {
             if let bdUrl = helper.backdropNSURL() {
                 self.movieBackdropImageView.setImageWithURL(bdUrl)
             }
-            self.movieSynopsisLabel.text = helper.synopsis()
+            self.movieSynopsisText.text = helper.synopsis()
             self.movieTitleLabel.text = helper.title()
+            super.title = helper.title()
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
