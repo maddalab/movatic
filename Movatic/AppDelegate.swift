@@ -26,14 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 var storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                var popularNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/popular", title: "Popular Movies")
+                var popularNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/popular", title: "Popular Movies", img: "popular")
                 
-                var topRatedNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/top_rated", title: "Top Rated")
+                var topRatedNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/top_rated", title: "Top Rated", img: "top_rated")
                 
-                var nowPlayingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/now_playing", title: "Now Playing")
+                var nowPlayingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/now_playing", title: "Now Playing", img: "now_playing")
                 
-                var upComingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/upcoming", title: "Coming Soon")
+                var upComingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/upcoming", title: "Coming Soon", img: "coming_soon")
                 
+                NSLog("Height is \(tabBarController.tabBar.frame.size.height)")
                 tabBarController.tabBar.tintColor = UIColor.whiteColor()
                 tabBarController.tabBar.barTintColor = UIColor.blackColor()
 
@@ -42,9 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    func instantiateTabViewController(movieClient: JLTMDbClient, storyboard: UIStoryboard, serviceConfig: NSDictionary, fetchUrl: String, title: String) -> UINavigationController {
+    func instantiateTabViewController(movieClient: JLTMDbClient, storyboard: UIStoryboard, serviceConfig: NSDictionary, fetchUrl: String, title: String, img: String) -> UINavigationController {
         var navigationController = storyboard.instantiateViewControllerWithIdentifier("MovaticNavicationViewController") as! UINavigationController
-        navigationController.tabBarItem.title = title
+        navigationController.tabBarItem.image = UIImage(named: img)
         
         var moviesViewController = navigationController.topViewController as! MovaticMoviesViewController
         moviesViewController.movieClient = movieClient
