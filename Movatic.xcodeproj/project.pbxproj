@@ -10,9 +10,9 @@
 		0CA7456A1B93BABE00694876 /* MovaticDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA745691B93BABE00694876 /* MovaticDetailsViewController.swift */; };
 		0CA7456D1B93C1CC00694876 /* MovieHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7456C1B93C1CC00694876 /* MovieHelper.swift */; };
 		0CA7456F1B93D38900694876 /* DetailsSynopsisLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7456E1B93D38900694876 /* DetailsSynopsisLabel.swift */; };
+		0CBFA6AD1B9490A000BF28D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBFA6AC1B9490A000BF28D0 /* Images.xcassets */; };
 		0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479C71B938F4000F795B3 /* AppDelegate.swift */; };
 		0CC479CD1B938F4000F795B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CB1B938F4000F795B3 /* Main.storyboard */; };
-		0CC479CF1B938F4000F795B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CE1B938F4000F795B3 /* Images.xcassets */; };
 		0CC479D21B938F4000F795B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479D01B938F4000F795B3 /* LaunchScreen.xib */; };
 		0CC479DE1B938F4000F795B3 /* MovaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479DD1B938F4000F795B3 /* MovaticTests.swift */; };
 		0CE23C8A1B9394530040382F /* MovaticMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C891B9394530040382F /* MovaticMoviesViewController.swift */; };
@@ -38,11 +38,11 @@
 		0CA745691B93BABE00694876 /* MovaticDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovaticDetailsViewController.swift; sourceTree = "<group>"; };
 		0CA7456C1B93C1CC00694876 /* MovieHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHelper.swift; sourceTree = "<group>"; };
 		0CA7456E1B93D38900694876 /* DetailsSynopsisLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsSynopsisLabel.swift; sourceTree = "<group>"; };
+		0CBFA6AC1B9490A000BF28D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0CC479C21B938F4000F795B3 /* Movatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479C61B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479C71B938F4000F795B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC479CC1B938F4000F795B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CC479CE1B938F4000F795B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0CC479D11B938F4000F795B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0CC479D71B938F4000F795B3 /* MovaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC479DC1B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +85,7 @@
 		0CC479B91B938F3F00F795B3 = {
 			isa = PBXGroup;
 			children = (
+				0CBFA6AC1B9490A000BF28D0 /* Images.xcassets */,
 				0CC479C41B938F4000F795B3 /* Movatic */,
 				0CC479DA1B938F4000F795B3 /* MovaticTests */,
 				0CC479C31B938F4000F795B3 /* Products */,
@@ -111,7 +112,6 @@
 				0CE23C871B9393EA0040382F /* View Controllers */,
 				0CC479C71B938F4000F795B3 /* AppDelegate.swift */,
 				0CC479CB1B938F4000F795B3 /* Main.storyboard */,
-				0CC479CE1B938F4000F795B3 /* Images.xcassets */,
 				0CC479D01B938F4000F795B3 /* LaunchScreen.xib */,
 				0CC479C51B938F4000F795B3 /* Supporting Files */,
 			);
@@ -264,9 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBFA6AD1B9490A000BF28D0 /* Images.xcassets in Resources */,
 				0CC479CD1B938F4000F795B3 /* Main.storyboard in Resources */,
 				0CC479D21B938F4000F795B3 /* LaunchScreen.xib in Resources */,
-				0CC479CF1B938F4000F795B3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
