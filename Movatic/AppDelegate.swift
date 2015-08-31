@@ -30,7 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 var topRatedNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/top_rated", title: "Top Rated")
                 
-                tabBarController.viewControllers = [popularNavigationController, topRatedNavigationController]
+                var nowPlayingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/now_playing", title: "Now Playing")
+                
+                var upComingNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/upcoming", title: "Coming Soon")
+                
+                tabBarController.viewControllers = [popularNavigationController, topRatedNavigationController, nowPlayingNavigationController, upComingNavigationController]
             }
         }
     }
