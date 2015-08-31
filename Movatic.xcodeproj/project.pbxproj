@@ -15,7 +15,7 @@
 		0CC479CF1B938F4000F795B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479CE1B938F4000F795B3 /* Images.xcassets */; };
 		0CC479D21B938F4000F795B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CC479D01B938F4000F795B3 /* LaunchScreen.xib */; };
 		0CC479DE1B938F4000F795B3 /* MovaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC479DD1B938F4000F795B3 /* MovaticTests.swift */; };
-		0CE23C8A1B9394530040382F /* MovaticPopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C891B9394530040382F /* MovaticPopularViewController.swift */; };
+		0CE23C8A1B9394530040382F /* MovaticMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C891B9394530040382F /* MovaticMoviesViewController.swift */; };
 		0CE23C8C1B9394880040382F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE23C8B1B9394880040382F /* MovieCell.swift */; };
 		DC5E2F8B1CA8584CFB400071 /* libPods-Movatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D5CBBF38CA0854F20FB9A4 /* libPods-Movatic.a */; };
 /* End PBXBuildFile section */
@@ -48,7 +48,7 @@
 		0CC479DC1B938F4000F795B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC479DD1B938F4000F795B3 /* MovaticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovaticTests.swift; sourceTree = "<group>"; };
 		0CE23C841B9390630040382F /* Movatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movatic-Bridging-Header.h"; sourceTree = "<group>"; };
-		0CE23C891B9394530040382F /* MovaticPopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovaticPopularViewController.swift; sourceTree = "<group>"; };
+		0CE23C891B9394530040382F /* MovaticMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovaticMoviesViewController.swift; sourceTree = "<group>"; };
 		0CE23C8B1B9394880040382F /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		2A76EA02E577ECF0FD959047 /* Pods-Movatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movatic/Pods-Movatic.debug.xcconfig"; sourceTree = "<group>"; };
 		2D047A45AC4EBFDEC388C223 /* Pods-Movatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movatic/Pods-Movatic.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		0CE23C871B9393EA0040382F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0CE23C891B9394530040382F /* MovaticPopularViewController.swift */,
+				0CE23C891B9394530040382F /* MovaticMoviesViewController.swift */,
 				0CA745691B93BABE00694876 /* MovaticDetailsViewController.swift */,
 			);
 			name = "View Controllers";
@@ -321,7 +321,7 @@
 				0CC479C81B938F4000F795B3 /* AppDelegate.swift in Sources */,
 				0CA7456A1B93BABE00694876 /* MovaticDetailsViewController.swift in Sources */,
 				0CA7456F1B93D38900694876 /* DetailsSynopsisLabel.swift in Sources */,
-				0CE23C8A1B9394530040382F /* MovaticPopularViewController.swift in Sources */,
+				0CE23C8A1B9394530040382F /* MovaticMoviesViewController.swift in Sources */,
 				0CE23C8C1B9394880040382F /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

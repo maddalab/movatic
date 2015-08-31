@@ -7,7 +7,7 @@
         <!--Movies-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MovaticPopularViewController" customModule="Movatic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovaticMoviesViewController" id="vXZ-lx-hvc" customClass="MovaticMoviesViewController" customModule="Movatic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -120,7 +120,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hzM-LG-gku">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hb-aA-NCi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MovaticNavicationViewController" automaticallyAdjustsScrollViewInsets="NO" id="7hb-aA-NCi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hA4-HJ-q5O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

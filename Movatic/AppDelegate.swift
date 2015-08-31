@@ -13,9 +13,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func initializeWithConfiguration(tabBarController: UITabBarController) {
+        
+        // initialize the api client
+        let movieClient = JLTMDbClient.sharedAPIInstance()
+        movieClient.APIKey = "c4ea245752c4d484f7fc05d79ab142e5"
+        
+        movieClient.GET("configuration", withParameters: nil) { (response, error) -> Void in
+            if let response: AnyObject = response {
+                NSLog("Loaded service Config")
+                let serviceConfig = response as! NSDictionary
+                
+                var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                var popularNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/popular", title: "Popular Movies")
+                
+                var topRatedNavigationController = self.instantiateTabViewController(movieClient, storyboard: storyboard, serviceConfig: serviceConfig, fetchUrl: "movie/top_rated", title: "Top Rated")
+                
+                tabBarController.viewControllers = [popularNavigationController, topRatedNavigationController]
+            }
+        }
+    }
+
+    func instantiateTabViewController(movieClient: JLTMDbClient, storyboard: UIStoryboard, serviceConfig: NSDictionary, fetchUrl: String, title: String) -> UINavigationController {
+        var navigationController = storyboard.instantiateViewControllerWithIdentifier("MovaticNavicationViewController") as! UINavigationController
+        navigationController.tabBarItem.title = title
+        
+        var moviesViewController = navigationController.topViewController as! MovaticMoviesViewController
+        moviesViewController.movieClient = movieClient
+        moviesViewController.serviceConfig = serviceConfig
+        moviesViewController.fetchUrl = fetchUrl
+        moviesViewController.title = title
+        
+        return navigationController
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController = UITabBarController()
+        
+        initializeWithConfiguration(tabBarController)
+        window?.rootViewController = tabBarController
+        
         return true
     }
 

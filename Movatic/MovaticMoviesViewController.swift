@@ -8,38 +8,29 @@
 
 import UIKit
 
-class MovaticPopularViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MovaticMoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var moviesTableView: UITableView!
-    var popularMovies: NSDictionary = [:]
+    var movies: NSDictionary = [:]
     var currentPage: Int = 0
     var serviceConfig: NSDictionary = [:]
-    let movieClient = JLTMDbClient.sharedAPIInstance()
+    var movieClient: JLTMDbClient!
+    var fetchUrl: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieClient.APIKey = "c4ea245752c4d484f7fc05d79ab142e5"
-        loadConfiguration()
-        movieClient.GET("movie/popular", withParameters: nil) { (response, error) -> Void in
+        movieClient.GET(fetchUrl, withParameters: nil) { (response, error) -> Void in
             if let response: AnyObject = response {
                 self.currentPage = 0
-                self.popularMovies = response as! NSDictionary
+                self.movies = response as! NSDictionary
             } else {
-                self.popularMovies = [:]
+                self.movies = [:]
             }
             self.moviesTableView.reloadData()
         }
         // set up the table view data source and delegate
         self.moviesTableView.delegate = self
         self.moviesTableView.dataSource = self
-    }
-    
-    func loadConfiguration() {
-        movieClient.GET("configuration", withParameters: nil) { (response, error) -> Void in
-            if let response: AnyObject = response {
-                self.serviceConfig = response as! NSDictionary
-            }
-        }
     }
     
     // IMPLEMENTATION of UITableDelegate methods
@@ -49,7 +40,7 @@ class MovaticPopularViewController: UIViewController, UITableViewDataSource, UIT
     
     // IMPLEMENTATION of UITableViewDataSources methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let result: AnyObject = self.popularMovies["results"] {
+        if let result: AnyObject = self.movies["results"] {
             return (result as! NSArray).count
         } else {
             return 0
@@ -58,7 +49,7 @@ class MovaticPopularViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
-        let movies = self.popularMovies["results"] as! NSArray?
+        let movies = self.movies["results"] as! NSArray?
         if let movies = movies {
             let index = indexPath.row
             if movies.count > index {
