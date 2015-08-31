@@ -42,21 +42,9 @@ class MovaticMainViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func imagesBaseUrlString() -> String? {
-        let imagesConfig = serviceConfig["images"] as? NSDictionary
-        if let imagesConfig = imagesConfig {
-            let imgRoot = imagesConfig["base_url"] as? String
-            return imgRoot
-        }
-        return nil
-    }
-    
-    func moviePosterUrl(posterPath: String) -> String? {
-        if let base = imagesBaseUrlString() {
-            let posterUrl = base + "w92" + posterPath
-            return posterUrl
-        }
-        return nil
+    // IMPLEMENTATION of UITableDelegate methods
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        moviesTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // IMPLEMENTATION of UITableViewDataSources methods
