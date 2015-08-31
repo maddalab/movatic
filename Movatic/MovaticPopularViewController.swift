@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovaticMainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MovaticPopularViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var moviesTableView: UITableView!
     var popularMovies: NSDictionary = [:]
