@@ -16,6 +16,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RdJ-SK-YXE">
+                                    <rect key="frame" x="0.0" y="-21" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
                                     <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="115" id="lxy-qe-VmS" customClass="MovieCell" customModule="Movatic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="320" height="115"/>
@@ -61,6 +69,7 @@
                         <barButtonItem key="backBarButtonItem" title="All" id="wVL-LJ-akA"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="RdJ-SK-YXE" id="Yvp-oL-aDf"/>
                         <outlet property="moviesTableView" destination="dns-TZ-GG9" id="E0I-zo-KTv"/>
                     </connections>
                 </viewController>

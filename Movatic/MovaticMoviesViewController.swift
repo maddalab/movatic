@@ -10,6 +10,7 @@ import UIKit
 
 class MovaticMoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var moviesTableView: UITableView!
     var movies: NSDictionary = [:]
     var currentPage: Int = 0
@@ -42,9 +43,11 @@ class MovaticMoviesViewController: UIViewController, UITableViewDataSource, UITa
                 self.currentPage = 0
                 self.movies = response as! NSDictionary
                 SVProgressHUD.showSuccessWithStatus("")
+                self.errorLabel.hidden = true
             } else {
                 self.movies = [:]
                 SVProgressHUD.showErrorWithStatus("")
+                self.errorLabel.hidden = false
             }
             self.moviesTableView.reloadData()
             self.refreshControl.endRefreshing()
