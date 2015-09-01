@@ -18,11 +18,6 @@ class MovaticDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SVProgressHUD.setBackgroundColor(UIColor.blackColor().colorWithAlphaComponent(0.5))
-        SVProgressHUD.setForegroundColor(UIColor.whiteColor())
-        SVProgressHUD.setViewForExtension(self.view)
-        SVProgressHUD.show()
-
         if let helper = helper {
             if let bdUrl = helper.backdropNSURL() {
                 self.movieBackdropImageView.setImageWithURL(bdUrl)
@@ -30,9 +25,6 @@ class MovaticDetailsViewController: UIViewController {
             self.movieSynopsisText.text = helper.synopsis()
             self.movieTitleLabel.text = helper.title()
             super.title = helper.title()
-            SVProgressHUD.showSuccessWithStatus("")
-        } else {
-            SVProgressHUD.showErrorWithStatus("")
         }
     }
 }
